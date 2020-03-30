@@ -5,7 +5,8 @@ $(document).ready(function(){
     // e.preventDefault();
     e.stopPropagation();
     $(this).before("<img class='insertedimg' src='img/pretty.jpg'>");
-    $(".insertedimg").click(function(){
+    $(".insertedimg").click(function(e){
+      e.stopPropagation();e
       $(this).remove();
     })
   });
